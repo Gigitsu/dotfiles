@@ -1,0 +1,15 @@
+[credential]
+	helper = osxkeychain
+[core]
+	excludesFile = ~/.global-gitignore
+[init]
+	defaultBranch = main
+[push]
+    default = current
+[pull]
+    rebase = true
+[rebase]
+    autoStash = true
+[user]
+	name = Gigitsu
+	email = gigitsu.23@gmail.com
