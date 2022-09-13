@@ -1,8 +1,9 @@
 (
     selected_tab: Indexed(12),
     command_fg: Indexed(7),
-    selection_bg: Indexed(4),
-    cmdbar_extra_lines_bg: Indexed(4),
+    selection_bg: Indexed(0),
+    cmdbar_bg: Indexed(0),
+    cmdbar_extra_lines_bg: Indexed(0),
     disabled_fg: Indexed(10),
     diff_line_add: Indexed(2),
     diff_line_delete: Indexed(1),
