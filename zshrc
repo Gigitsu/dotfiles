@@ -1,7 +1,15 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #################
 ### Gg Loader ###
 #################
 
+#--- Download ggloader if not exists
 [[ -f ~/.config/ggl/ggloader.zsh ]] || curl -L https://raw.githubusercontent.com/Gigitsu/ggloader/main/ggloader.zsh > ~/.config/ggl/ggloader.zsh
 
 source ~/.config/ggl/ggloader.zsh
@@ -12,7 +20,6 @@ source ~/.config/ggl/ggloader.zsh
 
 ggl bundle 'gigitsu/ggsh/tmux' # first of all, start tmux session
 ggl bundle 'gigitsu/ggsh/environment' # load this before every other modules
-
 ggl bundle 'gigitsu/ggsh/asdf'
 ggl bundle 'gigitsu/ggsh/editor' 
 ggl bundle 'gigitsu/ggsh/fasd'
@@ -40,3 +47,7 @@ ggl theme 'romkatv/powerlevel10k'
 #--- History substring search
 bindkey -M "emacs" "^[[A" history-substring-search-up
 bindkey -M "emacs" "^[[B" history-substring-search-down
+
+
+# Make it possible to add per-machine customizations.
+if [[ -f ~/.zshrc.local ]] source ~/.zshrc.local
