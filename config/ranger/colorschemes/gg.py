@@ -34,7 +34,7 @@ class GG(ColorScheme):
         else:
           fg = magenta
       if context.container:
-        fg = red
+        fg = red | BRIGHT
       if context.directory:
         attr |= bold
         fg = blue
