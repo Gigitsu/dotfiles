@@ -1,3 +1,8 @@
+# # Do not execute tmux in tty6, this could be a fallback tty in case tmux doesn't work anymore
+if [[ -z "$TMUX" && "$(tty)" != "/dev/tty6" ]]; then
+  exec tmux new-session -A -s 'home'
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -18,7 +23,6 @@ source ~/.config/ggl/ggloader.zsh
 ### Plugins ###
 ###############
 
-ggl bundle 'gigitsu/ggsh/tmux' # first of all, start tmux session
 ggl bundle 'gigitsu/ggsh/environment' # load this before every other modules
 ggl bundle 'gigitsu/ggsh/asdf'
 ggl bundle 'gigitsu/ggsh/editor' 
@@ -27,6 +31,7 @@ ggl bundle 'gigitsu/ggsh/fzf'
 ggl bundle 'gigitsu/ggsh/git'
 ggl bundle 'gigitsu/ggsh/history'
 ggl bundle 'gigitsu/ggsh/homebrew'
+ggl bundle 'gigitsu/ggsh/tmux'
 
 ggl bundle 'zsh-users/zsh-completions'
 
