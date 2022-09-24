@@ -93,7 +93,7 @@ class GG(ColorScheme):
         fg = blue
       elif context.tab:
         if context.good:
-          bg = green
+          bg = black
       elif context.link:
         fg = cyan
       attr |= bold
