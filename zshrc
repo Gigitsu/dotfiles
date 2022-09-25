@@ -54,5 +54,11 @@ bindkey -M "emacs" "^[[A" history-substring-search-up
 bindkey -M "emacs" "^[[B" history-substring-search-down
 
 
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+
+export LANG='en_US.UTF-8'
+
 # Make it possible to add per-machine customizations.
 if [[ -f ~/.zshrc.local ]] source ~/.zshrc.local
