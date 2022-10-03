@@ -1,4 +1,4 @@
-# # Do not execute tmux in tty6, this could be a fallback tty in case tmux doesn't work anymore
+# Do not execute tmux in tty6, this could be a fallback tty in case tmux doesn't work anymore
 if [[ -z "$TMUX" && "$(tty)" != "/dev/tty6" ]]; then
   exec tmux new-session -A -s 'home'
 fi
@@ -24,6 +24,7 @@ source ~/.config/ggl/ggloader.zsh
 ###############
 
 ggl bundle 'gigitsu/ggsh/environment' # load this before every other modules
+
 ggl bundle 'gigitsu/ggsh/asdf'
 ggl bundle 'gigitsu/ggsh/editor' 
 ggl bundle 'gigitsu/ggsh/fasd'
