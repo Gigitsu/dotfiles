@@ -21,7 +21,10 @@ fi
 #################
 
 #--- Download ggloader if not exists
-[[ -f ~/.config/ggl/ggloader.zsh ]] || curl -L https://raw.githubusercontent.com/Gigitsu/ggloader/main/ggloader.zsh > ~/.config/ggl/ggloader.zsh
+if [[ ! -f ~/.config/ggl/ggloader.zsh ]]; then
+  mkdir -p ~/.config/ggl
+  curl -L https://raw.githubusercontent.com/Gigitsu/ggloader/main/ggloader.zsh > ~/.config/ggl/ggloader.zsh
+fi
 
 source ~/.config/ggl/ggloader.zsh
 
