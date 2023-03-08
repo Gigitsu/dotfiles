@@ -1,15 +1,20 @@
-[credential]
-	helper = osxkeychain
+[color]
+    ui = auto
 [core]
-	excludesFile = ~/.global-gitignore
+    excludesFile = ~/.global-gitignore
+[credential]
+    helper = osxkeychain
 [init]
-	defaultBranch = main
-[push]
-    default = current
+    defaultBranch = main
+[merge]
+    stat = true
 [pull]
     rebase = true
+[push]
+    default = current
 [rebase]
     autoStash = true
-[user]
-	name = Gigitsu
-	email = gigitsu.23@gmail.com
+[rerere]
+    enabled = true
+[include]
+    path = ~/.gitconfig-local
