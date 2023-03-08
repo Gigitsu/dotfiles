@@ -6,6 +6,7 @@ Personal zsh configuration
 While in this folder, run:
 
 ```sh
+setopt EXTENDED_GLOB
 for dot_file in "$(pwd)"/^(README.md|LICENSE)(.N); do
   ln -s "$dot_file" "${ZDOTDIR:-$HOME}/.${dot_file:t}"
 done
