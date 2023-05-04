@@ -35,11 +35,15 @@ source ~/.cache/ggl/ggloader.zsh
 ggl bundle 'gigitsu/ggsh/environment' # load this before every other modules
 
 ggl bundle 'gigitsu/ggsh/asdf'
+ggl bundle 'gigitsu/ggsh/docker'
+ggl bundle 'gigitsu/ggsh/docker-compose'
 ggl bundle 'gigitsu/ggsh/editor' 
 ggl bundle 'gigitsu/ggsh/fzf'
 ggl bundle 'gigitsu/ggsh/git'
 ggl bundle 'gigitsu/ggsh/history'
 ggl bundle 'gigitsu/ggsh/homebrew'
+ggl bundle 'gigitsu/ggsh/kubectl'
+ggl bundle 'gigitsu/ggsh/terraform'
 ggl bundle 'gigitsu/ggsh/tmux'
 ggl bundle 'gigitsu/ggsh/zoxide'
 
@@ -69,6 +73,10 @@ export VISUAL='vim'
 export PAGER='less'
 
 export LANG='en_US.UTF-8'
+
+#--- Use correct python and node for vim and mvim
+(( ${+commands[vim]} )) && alias vim='PATH="$(brew --prefix node)/bin:$PATH" vim'
+(( ${+commands[mvim]} )) && alias mvim='PATH="$(brew --prefix node)/bin:$PATH" mvim'
 
 # Make it possible to add per-machine customizations.
 if [[ -f ~/.zshrc.local ]] source ~/.zshrc.local
