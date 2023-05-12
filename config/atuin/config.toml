@@ -1,0 +1,3 @@
+db_path = "~/.cache/atuin/history.db"
+key = "~/.cache/atuin/atuin-key"
+session_path = "~/.cache/atuin/session"
