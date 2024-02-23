@@ -1,5 +1,9 @@
+[branch]
+	sort = -committerdate
 [color]
     ui = auto
+[column]
+	ui = auto
 [core]
     excludesFile = ~/.global-gitignore
 [credential]
