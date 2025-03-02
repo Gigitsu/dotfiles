@@ -35,6 +35,7 @@ source ~/.cache/ggl/ggloader.zsh
 ggl bundle 'gigitsu/ggsh/environment' # load this before every other modules
 
 ggl bundle 'gigitsu/ggsh/asdf'
+ggl bundle 'gigitsu/ggsh/bat'
 ggl bundle 'gigitsu/ggsh/docker'
 ggl bundle 'gigitsu/ggsh/docker-compose'
 ggl bundle 'gigitsu/ggsh/editor' 
